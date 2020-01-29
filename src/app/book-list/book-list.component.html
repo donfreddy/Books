@@ -1,0 +1,17 @@
+<div class="row mt-5">
+  <div class="col-md-8 offset-md-2">
+    <h2>𝐘𝐨𝐮𝐫 𝐛𝐨𝐨𝐤𝐬 :</h2>
+    <hr>
+    <ul class="list-group" *ngFor="let b of list">
+      <li class="list-group-item">
+        <p class="mb-1">𝐓𝐢𝐭𝐥𝐞 : {{ b.title }}</p>
+        <p class="mb-1">𝐀𝐮𝐭𝐡𝐨𝐫 : {{ b.author }}</p>
+        <p *ngIf="b.edition" class="mb-1">𝐄𝐝𝐢𝐭𝐢𝐨𝐧 : {{ b.edition }}</p>
+        <div class="float-right">
+          <button class="btn btn-success btn-sm" routerLink="/book/{{b.id}}">𝐄𝐝𝐢𝐭</button>
+          <button class="btn btn-danger ml-1 btn-sm" (click)="onDelete(b.id)">𝐃𝐞𝐥𝐞𝐭𝐞</button>
+        </div>
+      </li>1
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-8 offset-md-2">
+    <h2 class="text-center mb-5 mt-5">𝐔𝐩𝐝𝐚𝐭𝐞 𝐛𝐨𝐨𝐤</h2>
+
+    <form [formGroup]="editForm" (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <label for="title">𝐁𝐨𝐨𝐤 𝐭𝐢𝐭𝐥𝐞</label>
+        <input type="text" formControlName="title" name="title" class="form-control" id="title" placeholder="ex: As you like it">
+      </div>
+
+      <div class="form-group">
+        <label for="author">𝐁𝐨𝐨𝐤 𝐚𝐮𝐭𝐡𝐨𝐫</label>
+        <input type="text" formControlName="author" name="author" class="form-control" id="author" placeholder="ex: William Shakespeare">
+      </div>
+
+      <div class="form-group">
+        <label for="edition">𝐁𝐨𝐨𝐤 𝐞𝐝𝐢𝐭𝐢𝐨𝐧</label>
+        <input type="number" formControlName="edition" name="edition" class="form-control" min="0" id="edition" placeholder="ex: 2018">
+      </div>
+
+      <button class="btn btn-success">𝐔𝐩𝐝𝐚𝐭𝐞</button>
+      <button class="btn btn-secondary ml-2" type="button" (click)="goBack()">𝐂𝐚𝐧𝐜𝐞𝐥</button>
+
+    </form>
+
+  </div>
+</div>
